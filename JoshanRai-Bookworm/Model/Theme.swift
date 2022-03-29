@@ -24,4 +24,12 @@ extension ShapeStyle where Self == Color {
     static var aluminum: Color {
         Color(red: 0.664, green: 0.664, blue: 0.664)
     }
+    
+    static var accentYellowLight: Color {
+        Color(red: 1.000, green: 0.777, blue: 0.000)
+    }
+    
+    static var accentYellowDark: Color {
+        Color(red: 0.896, green: 0.615, blue: 0.060)
+    }
 }

@@ -87,7 +87,7 @@ struct DetailsCompletedView: View {
         }
         let format = DateFormatter()
         format.dateStyle = .long
-        return "Completed on: \(format.string(from: date))"
+        return "\(format.string(from: date))"
     }
     
     var body: some View {

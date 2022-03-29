@@ -14,7 +14,10 @@ struct ContentView: View {
         SortDescriptor(\.author)
     ]) var books: FetchedResults<Book>
     
+    @AppStorage("isDarkMode") private var isDarkMode = false
+    
     @State private var showingAddScreen = false
+    @State private var showingSettingsScreen = false
     
     var body: some View {
         NavigationView {
@@ -54,6 +57,13 @@ struct ContentView: View {
                             Label("Add Book", systemImage: "plus")
                         }
                     }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showingSettingsScreen.toggle()
+                        } label: {
+                            Label("Settings", systemImage: "gearshape")
+                        }
+                    }
                     ToolbarItem(placement: .navigationBarLeading) {
                         EditButton()
                     }
@@ -61,8 +71,11 @@ struct ContentView: View {
                 .sheet(isPresented: $showingAddScreen) {
                     AddBookView()
                 }
-                .preferredColorScheme(.dark)
+                .sheet(isPresented: $showingSettingsScreen) {
+                    SettingsView()
+                }
         }
+        .tint(isDarkMode ? .accentYellowLight : .accentYellowDark)
     }
     
     func deleteBooks(at offsets: IndexSet) {

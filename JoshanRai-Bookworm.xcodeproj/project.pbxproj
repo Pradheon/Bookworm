@@ -24,6 +24,7 @@
 		3F43C33227F298E0006FAB70 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C33127F298E0006FAB70 /* Theme.swift */; };
 		3F43C33427F2AFAC006FAB70 /* DetailViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C33327F2AFAC006FAB70 /* DetailViewModifiers.swift */; };
 		3F43C33627F2B2BF006FAB70 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C33527F2B2BF006FAB70 /* CardView.swift */; };
+		3F43C33827F2C543006FAB70 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C33727F2C543006FAB70 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		3F43C33127F298E0006FAB70 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		3F43C33327F2AFAC006FAB70 /* DetailViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModifiers.swift; sourceTree = "<group>"; };
 		3F43C33527F2B2BF006FAB70 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3F43C33727F2C543006FAB70 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				3F43C31827F17755006FAB70 /* ContentView.swift */,
+				3F43C33727F2C543006FAB70 /* SettingsView.swift */,
 				3F43C33527F2B2BF006FAB70 /* CardView.swift */,
 				3F43C31F27F263DD006FAB70 /* AddBookView.swift */,
 				3F43C32527F26C16006FAB70 /* RatingView.swift */,
@@ -209,6 +212,7 @@
 				3F43C32627F26C16006FAB70 /* RatingView.swift in Sources */,
 				3F43C33427F2AFAC006FAB70 /* DetailViewModifiers.swift in Sources */,
 				3F43C32A27F27315006FAB70 /* DetailView.swift in Sources */,
+				3F43C33827F2C543006FAB70 /* SettingsView.swift in Sources */,
 				3F43C32027F263DD006FAB70 /* AddBookView.swift in Sources */,
 				3F43C31D27F18066006FAB70 /* ContentViewC.swift in Sources */,
 				3F43C33027F2982F006FAB70 /* RectangleDividerView.swift in Sources */,
@@ -355,7 +359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jrai.JoshanRai-Bookworm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -384,7 +388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.5;
+				MARKETING_VERSION = 1.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jrai.JoshanRai-Bookworm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

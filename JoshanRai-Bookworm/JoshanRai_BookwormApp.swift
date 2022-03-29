@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct JoshanRai_BookwormApp: App {
     @State private var dataController = DataController()
+    @AppStorage("isDarkMode") private var isDarkMode = false
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
+                .preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }
