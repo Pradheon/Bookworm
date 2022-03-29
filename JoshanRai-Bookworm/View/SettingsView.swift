@@ -21,6 +21,11 @@ struct SettingsView: View {
                 } header: {
                     Text("Preffered Color Scheme")
                 }
+                Section {
+                    Button("Save") {
+                        dismiss()
+                    }
+                }
             }
             .navigationTitle("Settings")
             .preferredColorScheme(isDarkMode ? .dark : .light)
