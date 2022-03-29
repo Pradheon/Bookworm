@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var books: FetchedResults<Book>
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.title),
+        SortDescriptor(\.author)
+    ]) var books: FetchedResults<Book>
     
     @State private var showingAddScreen = false
     
@@ -17,8 +20,12 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(books) { book in
+                    NavigationLink(destination: DetailView(book: book)) {
+                        CardView(book: book)
+                    }
+                    /*
                     NavigationLink {
-                        Text(book.title ?? "Unknown Title")
+                        DetailView(book: book)
                     } label: {
                         HStack {
                             EmojiRatingView(rating: book.rating)
@@ -27,12 +34,16 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text(book.title ?? "Unknown Title")
                                     .font(.headline)
+                                    .foregroundColor(book.rating == 1 ? Color.red : Color.primary)
                                 Text(book.author ?? "Unknown Author")
-                                    .foregroundColor(.secondary)
+                                    //.foregroundColor(.secondary)
+                                    .foregroundColor(book.rating == 1 ? Color.red.opacity(0.5) : Color.secondary)
                             }
                         }
                     }
+                    */
                 }
+                .onDelete(perform: deleteBooks)
             }
                 .navigationTitle("Bookworm")
                 .toolbar {
@@ -43,16 +54,34 @@ struct ContentView: View {
                             Label("Add Book", systemImage: "plus")
                         }
                     }
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
                 }
                 .sheet(isPresented: $showingAddScreen) {
                     AddBookView()
                 }
+                .preferredColorScheme(.dark)
         }
+    }
+    
+    func deleteBooks(at offsets: IndexSet) {
+        for offset in offsets {
+            /// Find this book in our fetch request
+            let book = books[offset]
+            
+            /// Delete the book from the context
+            moc.delete(book)
+        }
+        
+        /// Save the context
+        try? moc.save()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

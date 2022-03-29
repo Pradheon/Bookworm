@@ -19,6 +19,11 @@
 		3F43C32327F26753006FAB70 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C32127F26753006FAB70 /* Bookworm.xcdatamodeld */; };
 		3F43C32627F26C16006FAB70 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C32527F26C16006FAB70 /* RatingView.swift */; };
 		3F43C32827F26E81006FAB70 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C32727F26E81006FAB70 /* EmojiRatingView.swift */; };
+		3F43C32A27F27315006FAB70 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C32927F27315006FAB70 /* DetailView.swift */; };
+		3F43C33027F2982F006FAB70 /* RectangleDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C32F27F2982F006FAB70 /* RectangleDividerView.swift */; };
+		3F43C33227F298E0006FAB70 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C33127F298E0006FAB70 /* Theme.swift */; };
+		3F43C33427F2AFAC006FAB70 /* DetailViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C33327F2AFAC006FAB70 /* DetailViewModifiers.swift */; };
+		3F43C33627F2B2BF006FAB70 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43C33527F2B2BF006FAB70 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		3F43C32227F26753006FAB70 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
 		3F43C32527F26C16006FAB70 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		3F43C32727F26E81006FAB70 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		3F43C32927F27315006FAB70 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		3F43C32F27F2982F006FAB70 /* RectangleDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleDividerView.swift; sourceTree = "<group>"; };
+		3F43C33127F298E0006FAB70 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		3F43C33327F2AFAC006FAB70 /* DetailViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModifiers.swift; sourceTree = "<group>"; };
+		3F43C33527F2B2BF006FAB70 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,7 @@
 			children = (
 				3F43C32127F26753006FAB70 /* Bookworm.xcdatamodeld */,
 				3F43C31527F1736B006FAB70 /* DataController.swift */,
+				3F43C33127F298E0006FAB70 /* Theme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,9 +119,13 @@
 			isa = PBXGroup;
 			children = (
 				3F43C31827F17755006FAB70 /* ContentView.swift */,
+				3F43C33527F2B2BF006FAB70 /* CardView.swift */,
 				3F43C31F27F263DD006FAB70 /* AddBookView.swift */,
 				3F43C32527F26C16006FAB70 /* RatingView.swift */,
 				3F43C32727F26E81006FAB70 /* EmojiRatingView.swift */,
+				3F43C32927F27315006FAB70 /* DetailView.swift */,
+				3F43C33327F2AFAC006FAB70 /* DetailViewModifiers.swift */,
+				3F43C32F27F2982F006FAB70 /* RectangleDividerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,9 +204,14 @@
 				3F43C30327F169E7006FAB70 /* ContentViewA.swift in Sources */,
 				3F43C31627F1736B006FAB70 /* DataController.swift in Sources */,
 				3F43C31127F17093006FAB70 /* ContentViewB.swift in Sources */,
+				3F43C33627F2B2BF006FAB70 /* CardView.swift in Sources */,
+				3F43C33227F298E0006FAB70 /* Theme.swift in Sources */,
 				3F43C32627F26C16006FAB70 /* RatingView.swift in Sources */,
+				3F43C33427F2AFAC006FAB70 /* DetailViewModifiers.swift in Sources */,
+				3F43C32A27F27315006FAB70 /* DetailView.swift in Sources */,
 				3F43C32027F263DD006FAB70 /* AddBookView.swift in Sources */,
 				3F43C31D27F18066006FAB70 /* ContentViewC.swift in Sources */,
+				3F43C33027F2982F006FAB70 /* RectangleDividerView.swift in Sources */,
 				3F43C32327F26753006FAB70 /* Bookworm.xcdatamodeld in Sources */,
 				3F43C31927F17755006FAB70 /* ContentView.swift in Sources */,
 				3F43C30127F169E7006FAB70 /* JoshanRai_BookwormApp.swift in Sources */,
@@ -335,7 +355,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jrai.JoshanRai-Bookworm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -364,7 +384,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.6;
+				MARKETING_VERSION = 1.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jrai.JoshanRai-Bookworm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
