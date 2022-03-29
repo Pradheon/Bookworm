@@ -30,6 +30,7 @@ struct SettingsView: View {
             .navigationTitle("Settings")
             .preferredColorScheme(isDarkMode ? .dark : .light)
         }
+        .tint(isDarkMode ? .accentYellowLight : .accentYellowDark)
     }
 }
 
